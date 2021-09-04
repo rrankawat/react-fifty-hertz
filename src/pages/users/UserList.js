@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import MainLayout from '../../layouts/MainLayout'
 import { listUsers } from '../../actions/userActions'
+import { formatDate } from '../../utils/functions'
 
 const UserList = () => {
   const dispatch = useDispatch()
@@ -37,7 +38,7 @@ const UserList = () => {
                 <tr key={user.createdAt}>
                   <td>{index + 1}</td>
                   <td>{user.id}</td>
-                  <td>{user.createdAt}</td>
+                  <td>{formatDate(user.createdAt)}</td>
                   <td>{user.name}</td>
                   <td>
                     <a href={user.avatar} target='_blank'>
