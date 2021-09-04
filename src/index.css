@@ -81,7 +81,6 @@ label {
 }
 
 .table {
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
@@ -93,7 +92,7 @@ label {
   padding: 8px;
 }
 
-.table tr:nth-child(even) {
+.table tbody tr:nth-child(odd) {
   background-color: #dddddd;
 }
 /* Utils - End */
