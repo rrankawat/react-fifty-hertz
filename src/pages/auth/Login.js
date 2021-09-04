@@ -1,12 +1,24 @@
 import React from 'react'
-import AuthLayout from '../../layouts/AuthLayout'
+import { useHistory } from 'react-router'
 import { FaUserAlt, FaLock } from 'react-icons/fa'
+import AuthLayout from '../../layouts/AuthLayout'
 
 const LoginScreen = () => {
+  const history = useHistory()
+
+  const onSubmit = e => {
+    e.preventDefault()
+
+    // Validation Logic
+
+    // Redirect
+    history.push('/users')
+  }
+
   return (
     <AuthLayout>
       <div className='auth-container'>
-        <form>
+        <form onSubmit={onSubmit}>
           <div className='auth-form-group'>
             <FaUserAlt size={10} />
             <input
