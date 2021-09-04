@@ -79,6 +79,23 @@ label {
   border-radius: 3px;
   color: #fff;
 }
+
+.table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table td,
+.table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+.table tr:nth-child(even) {
+  background-color: #dddddd;
+}
 /* Utils - End */
 
 /* --------------- Auth ----------------- */
